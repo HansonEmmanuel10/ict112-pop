@@ -1,36 +1,41 @@
-"""
-Solutions to assignment 3
-"""
-
-"""
-1.Write a Python program to reverse the string "Programming". Print the reversed string.
-Hint: Use string slicing or a loop.
-"""
+Question 1
+original_string = "Programming"
+reversed_string = original_string[::-1]
+print(reversed_string)
 
 
-
-"""
-2.Create a Python program that takes a user’s full name as input and prints the initials in uppercase.
-Example: Input: "john doe", Output: "J.D."
-"""
-
+Question 2
+full_name = input("Enter your full name: ")
+initials = ''.join([name[0].upper() + '.' for name in full_name.split()])
+print(initials)
 
 
-"""
-3.Write a Python program to check if a given string is a palindrome. A palindrome reads the same forwards
-and backward (e.g., "radar", "level"). Hint: Compare the string with its reverse.
-"""
+QUESTION 3
+def is_palindrome(s):
+    return s == s[::-1]
+  
+input_string = input("Enter a string: ")
+if is_palindrome(input_string):
+    print(f'"{input_string}" is a palindrome.')
+else:
+    print(f'"{input_string}" is not a palindrome.')
+  
+Question 4
+
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+
+num_words = len(words)
+
+print(f"The sentence '{sentence}' has {num_words} words.")
 
 
+Question 5
 
-"""
-4.Create a Python program that asks the user to enter a sentence and counts the number of words in the sentence.
-Hint: Use the split() method to break the string into words.
-"""
+original_string = "This is a string and it is an example."
 
+# Replace "is" with "was"
+modified_string = original_string.replace("is", "was")
 
+print(modified_string)
 
-"""
-5.Write a Python program to replace all occurrences of "is" with "was" in the string "This is a string and it
-is an example." Print the modified string.
-"""
